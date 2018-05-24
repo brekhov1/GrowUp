@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <include android:id="@+id/toolbar_empty"
+        layout="@layout/toolbar_empty"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_empty"
+        android:padding="16dp"
+        tools:context="com.example.growup.SettingsActivity">
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Включить уведомления (каждую неделю)" />
+
+        <Button
+            android:id="@+id/delete_data"
+            android:layout_width="350dp"
+            android:layout_below="@+id/switch1"
+            android:layout_height="wrap_content"
+            android:text="Удалить все измерения"/>
+
+        <Button
+            android:id="@+id/delete_children"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/delete_data"
+            android:text="Удалить всех детей" />
+
+        <Button
+            android:id="@+id/repeat_demo"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Повторить начальный экран"
+            android:layout_below="@id/delete_children"/>
+
+        <Button
+            android:id="@+id/disable_kids"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Disable picture on the main screen"
+            android:layout_below="@id/repeat_demo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/icons"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="@string/n_nsamsung_it_school"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/icons"
+            android:textAlignment="center"
+            android:textSize="8sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
